@@ -102,13 +102,16 @@ body {
 }
 
 .header_section .container-fluid {
-  padding-right: 25px;
+  padding-right: 0px;
   padding-left: 25px;
+  padding-bottom: 0px;
   background-color: #232323;
+  height: 50px; /* 将100px替换为你需要的高度 */
 }
 
 .container-fluid .navbar .navbar-brand span {
   color: #fff;
+  
 }
 
 .header_section .nav_container {
@@ -116,7 +119,7 @@ body {
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
-  margin: 10px 30px;
+  margin: -10px 10px;
   color: #fff;
   text-align: center;
   position: relative;
@@ -256,6 +259,7 @@ a:focus {
 
 
 .slider_section .detail-box h1 {
+  margin-top: 100px;
   font-size: 4rem;
   text-transform: uppercase;
   color: #000;
@@ -404,23 +408,24 @@ a:focus {
 .table-container .who_section .row .detail-box .content{
   width: 100%;
   height: 100px;
-  white-space: nowrap;        /* 不换行 */
-  overflow: hidden;           /* 隐藏溢出内容 */
+  white-space: normal;        /* 不换行 */
+  overflow: visible;       
+      /* 隐藏溢出内容 */
   text-overflow: ellipsis;    /* 显示省略号 */
 }
 
 .table-container .who_section .img-box img {
-  /* width: 100%; */
-  height: 100%;
+  width: 100%; /* Image takes full width of its parent container */
+  image-rendering: -webkit-optimize-contrast;
+  margin-left: 0; /* Adjust your margin as needed */
 }
 
 
-.table-container .who_section .img-box img {
-  width: 100%;
-}
+
 
 .table-container .who_section .detail-box {
   margin-left: 65px;
+  
 }
 
 .table-container .who_section .detail-box p {
@@ -826,5 +831,26 @@ a:focus {
   color: #fbfcfd;
 }
 
+
+/* 下面这三个会影响最下面的，想想怎么修改 */
+.slider_section .detail-box {
+  text-align: center; /* 将文本块内的内容居中对齐 */
+}
+
+.slider_section .detail-box h1 {
+  margin-bottom: 10px; /* 控制标题与下面段落之间的间距 */
+}
+
+.slider_section .detail-box p {
+  margin-top: 0; /* 删除段落的顶部默认间距 */
+  font-size: 20px; /* 根据需要调整文本大小 */
+  line-height: 1.5; /* 如果需要增大行高来改善可读性 */
+  margin-left: 0px;
+}
+.slider_section .additional-text {
+  text-align: left; /* 确保文字是左对齐的 */
+  line-height: 1.5; /* 可以调整行间距 */
+  /* 其他你需要的样式 */
+}
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
